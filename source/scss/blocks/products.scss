@@ -1,0 +1,29 @@
+.products {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 0 370px;
+  }
+}
+
+.product {
+  &__img-wrapper {
+
+  }
+
+  &__img {
+
+  }
+
+  &__title {
+
+  }
+
+  &__description {
+
+  }
+}

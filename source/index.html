@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="./css/style.css">
     <title>3D-print</title>
 </head>
@@ -156,9 +156,149 @@
         </section>
         <section class="calculation-section">
             <h2 class="section-title">Рассчитать стоимость <span class="gold-text">3D</span>-печати</h2>
-
+            <div class="info">
+                <div class="info__tabs">
+                    <p class="info__tab">Материалы</p>
+                    <p class="info__tab">Принтеры</p>
+                </div>
+                <div class="info__options options">
+                    <ul class="options-materials options__list">
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">ABS PRO (FDM)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">PLA (FDM)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">ELASTAN (FDM)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">COPET (FDM)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">NYLON CARBON (FDM)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">TANGO (POLYJET)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">VERO WHITE (POLYJET)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">VERO CLEAR (POLYJET)</summary>
+                                <p class="options__description">ABS-пластик - ударопрочная техническая термопластическая смола на основ сополимера крилонитрила с бутадиеном и стиролом.</p>
+                            </details>
+                        </li>
+                    </ul>
+                    <ul class="options-printers options__list">
+                        <li class="options__item">
+                            <details class="">
+                                <summary class="options__title">title text</summary>
+                                <p class="options__description">description text</p>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form class="calc" action="#">
+                <p class="calc__steps">Шаг <span class="calc__step-num">1</span> из 3</p>
+                <div class="calc__indicators">
+                    <span class="calc__indicator" data-index="1"></span>
+                    <span class="calc__indicator" data-index="2"></span>
+                    <span class="calc__indicator" data-index="3"></span>
+                </div>
+                <div class="calc__step" data-index="1">
+                    <input class="calc__download" type="file" id="file">
+                    <label class="calc__download-title" for="file"></label>
+                    <dl>
+                        <dt>Допустимые расширения:</dt>
+                        <dd>.jpg, .jpeg, .png, .gif, .pdf, .psd, .ai, .max, .cdr, .3ds, .stl, .igs, .model, .mxp, .obj, .wrl, .3dm, .fbx, .matpart,
+                            .matamx, .zip, .rar, .7z, .skp, .dae, .ply, .magics, .mgx, .x3d, .x3dv, .3mf, .stp, .step, .prt, .zpr
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Максимальный размер файла:</dt>
+                        <dd>10 Мб</dd>
+                    </dl>
+                    <input class="calc__url" type="url" placeholder="Или добавьте ссылку на макет в облаке (Dropbox, Mega, Google Drive и т.п.)">
+                </div>
+                <div class="calc__step" data-index="2">
+                    <p class="calc__subtitle">Введите размеры фигуры</p>
+                    <div class="calc__inputs">
+                        <label class="input-title" for="width">Ширина, мм</label>
+                        <input class="input w30" name="width" id="width" type="text" placeholder="Ширина, мм">
+                        <label class="input-title" for="height">Высота, мм</label>
+                        <input class="input w30" name="height" id="height" type="text" placeholder="Высота, мм">
+                        <label class="input-title" for="length">Длина, мм</label>
+                        <input class="input w30" name="length" id="length" type="text" placeholder="Длина, мм">
+                        <label class="input-title input-title--hidden" for="count">Количество</label>
+                        <input class="input w50" name="count" id="count" type="text" placeholder="Количество">
+                        <label class="input-title" for="color">Цвет</label>
+                        <input class="input w50" name="color" id="color" type="text" placeholder="Цвет">
+                    </div>
+                </div>
+                <div class="calc__step" data-index="3">
+                    <p class="calc__subtitle">Введите размеры фигуры</p>
+                    <div class="calc__inputs">
+                        <label class="input-title input-title--hidden" for="calc-name">Ваше имя</label>
+                        <input class="input w100" name="name" id="calc-name" type="text" placeholder="Ваше имя">
+                        <label class="input-title input-title--hidden" for="calc-tel">Телефон</label>
+                        <input class="input w100" name="tel" id="calc-tel" type="text" placeholder="Телефон">
+                    </div>
+                </div>
+                <div class="calc__step" data-index="finish">
+                    <div class="calc__final-img">
+                        <img src="" alt="Emoji" width="90" height="90">
+                    </div>
+                    <p class="calc__subtitle">Спасибо за заявку! </p>
+                    <p class="calc__thanks">Скоро наш менеджер свяжется с вами и уточнит стоимость вашего изделия</p>
+                </div>
+                <div class="calc__navigation">
+                    <button class="calc__prev calc__btn--show" type="button">Назад</button>
+                    <button class="calc__next calc__btn--show" type="button">Далее</button>
+                    <button class="calc__submit" type="submit">Рассчитать</button>
+                    <button class="calc__reset" type="reset">Назад</button>
+                </div>
+            </form>
         </section>
-        <section class="feedback-section"></section>
+        <section class="feedback-section">
+            <div class="w50">
+                <h2 class="section-title">Остались вопросы?</h2>
+                <p class="section-description">Оформите заявку на сайте и мы свяжемся с вами в ближайшее время.</p>
+            </div>
+            <form class="feedback w50" action="#">
+                <label class="input-title" for="name">Ваше имя</label>
+                <input class="input w50" name="name" id="name" type="text" placeholder="Ваше имя">
+                <label class="input-title" for="tel">Телефон</label>
+                <input class="input w50" name="tel" id="tel" type="text" placeholder="Телефон">
+                <label class="input-title input-title--hidden" for="feedback-text">Ваш вопрос</label>
+                <textarea class="feedback__text w100" name="feedback-text" id="feedback-text" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+                <button class="feedback__submit" type="submit">Отправить</button>
+                <p class="feedback__agreement">Нажимая на кнопку, вы соглашаетесь с <a class="link" href="#">Политикой конфиденциальности</a></p>
+            </form>
+        </section>
     </div>
 </main>
 <footer class="footer">
